@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{moodle}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{tasks}
+\usepackage{relsize}
+
+\begin{document}
+
+
+\begin{quiz}{Quiz 7}
+%polynomials
+\begin{essay}[response field lines=5,attachments allowed=0]{Quiz 7: Complex roots of unity and group actions} 
+Consider the (multiplicative) group of $n$-th complex roots of unity
+\[U_n(\mathbb{C})=\{z \in \mathbb{C} \mid z^n=1\}\]
+and let $\mu_n$ be the first complex root of unity. Notice that $U_n(\mathbb{C})=\langle \mu_n\rangle$.
+\begin{enumerate}
+\item (Complex roots of unity and Galois groups) Consider the map $\mathbb{C} \to \mathbb{C}$ given by $z \mapsto z^i$. We can restrict this map to $U_n(\mathbb{C})$ and below you will study the properties of this ``power map" on the group $U_n(\mathbb{C})$.
+\begin{enumerate}
+\item Let $S$ be the set of group homomorphism $U_n(\mathbb{C}) \to U_n(\mathbb{C})$. Show that the map $z \mapsto z^i$ is in $S$. (So you need to show that the image is contained in $U_n(\mathbb{C})$ and that this is a group homomorphism). We will call $\alpha_i$ the map $\alpha_i: U_n(\mathbb{C}) \to U_n(\mathbb{C})$ given by $z \mapsto z^i$.  
+    \item  Consider $\alpha_i, \alpha_j \in S$. Show that $S$ is closed under composition of maps.
+    \item Show that $\alpha_i$ is a group automorphism if and only if $i$ and $n$ are coprime.
+    \item Consider the set $G$ of automorphisms of $U_n(\mathbb{C})$, so $G$ is the subset of the elements of $S$ that have inverses under function composition. Show that $G$ is a group by showing $G \cong \mathbb{Z}_n^*$.
+    \item Consider $\mu_8$, the first complex 8th root of unity. Factor $t^8-1$ completely over $\mathbb{Q}$ and find the 8th cyclotomic polynomial.
+    \item Describe the Galois group of $\mathbb{Q}(\mu_8):\mathbb{Q}$.
+    \item Prove/disprove. For any $n$ the Galois group of $\mathbb{Q}(\mu_n):\mathbb{Q}$ is cyclic.
+    \end{enumerate}    
+\item (Actions)  In the following questions, for ease of notation, we are dropping the index $n$ so $\mu=\mu_n$. Consider the action of the group $U_n(\mathbb{C})=\langle \mu \rangle$ on the vector space $\mathbb{C}^2$ given by 
+\[\mu \cdotp (x , y) = (\mu\,   x , \overline{\mu} \,   y) \, ,\] 
+where the operation on the entries of the vector is multiplication of complex numbers.
+\begin{enumerate}
+\item Assuming that this is an action, find the vector $\mu^i \cdotp (x , y)$.
+\item Find three vectors in the orbit of $(1,1)$.
+\item Assuming that this action is a linear action, so that the action of each group element is a linear transformation, find a matrix that represents the map given by the action of $\mu $. So give a matrix for the linear map 
+\[  (x , y) \mapsto  (\mu \,  x , \overline{\mu} \,   y). \]
+\item If the matrix $A$ represents the action of $\mu$, which matrix would represent the action of $\mu^i$?
+\item Define the action of $\mu $ on the polynomial ring $\mathbb{C}[x,y]$ given by 
+\[ \mu  \cdotp x = \mu \,  x , \; \mu  \cdotp y = \overline{\mu} \,   y \]
+and extend the action to all polynomials by prescribing that $\mu  \cdotp p(x,y) = p(\mu  \cdotp x, \mu  \cdotp y) = p(\mu\,   x , \overline{\mu} \,   y)$. Study the orbit of $p(x,y)=xy$.
+\item Find at least one element in the stabilizer of  $p(x,y)=xy$.
+    \end{enumerate} 
+    \end{enumerate}
+\end{essay}
+\end{quiz}
+\end{document}
